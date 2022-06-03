@@ -15,6 +15,7 @@ class Position:
 
 @dataclasses.dataclass
 class LogEntry:
+    id: int
     when: datetime.datetime
     wind_direction: float
     wind_speed: float
@@ -36,7 +37,8 @@ def my_view(request):
         return math.degrees(rad)
 
     logs: List[LogEntry] = [
-        LogEntry(when=datetime.datetime.now() - datetime.timedelta(hours=2),
+        LogEntry(id=1,
+                 when=datetime.datetime.now() - datetime.timedelta(hours=2),
                  wind_direction=(3 * math.pi / 2),
                  wind_speed=6.5,
                  sea_state='',
@@ -47,7 +49,8 @@ def my_view(request):
                  position=Position(11.831233333333333, 58.14203333333333, 0.0),
                  notes="Passing Svanesund"
                  ),
-        LogEntry(when=datetime.datetime.now() - datetime.timedelta(hours=1),
+        LogEntry(id=2,
+                 when=datetime.datetime.now() - datetime.timedelta(hours=1),
                  wind_direction=(3 * math.pi / 2),
                  wind_speed=6.5,
                  sea_state='',
@@ -58,7 +61,8 @@ def my_view(request):
                  position=Position(11.831233333333333, 58.14203333333333, 0.0),
                  notes="Still Passing Svanesund"
                  ),
-        LogEntry(when=datetime.datetime.now(),
+        LogEntry(id=3,
+                 when=datetime.datetime.now(),
                  wind_direction=(3 * math.pi / 2),
                  wind_speed=6.5,
                  sea_state='',

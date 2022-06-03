@@ -108,6 +108,9 @@ button, input, optgroup, select, textarea {
 .starter-template .logbook tr:nth-child(even) {
   background-color: #150a6e;
 }
+.starter-template .logbook tr:hover{
+  background-color: #350a6e;
+}
 .starter-template .logbook th {
   text-align: center;
   padding: 1em;
