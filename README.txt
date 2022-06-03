@@ -28,3 +28,10 @@ Getting Started
 - Run your project.
 
     env/bin/pserve development.ini
+
+
+
+Credits
+-------
+
+- Temporary logo from: https://www.pinclipart.com/pindetail/iToxJxT_sailing-into-freedom-crescent-clipart/

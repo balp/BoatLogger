@@ -3,7 +3,7 @@ body {
   font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 300;
   color: #ffffff;
-  background: #bc2131;
+  background: #5980d7;
 }
 h1,
 h2,
@@ -41,11 +41,11 @@ button, input, optgroup, select, textarea {
 }
 .starter-template .content h1 .smaller {
   font-size: 40px;
-  color: #f2b7bd;
+  color: #150a6e;
 }
 .starter-template .content .lead {
   font-size: 25px;
-  color: #f2b7bd;
+  color: #150a6e;
 }
 .starter-template .content .lead .font-normal {
   color: #ffffff;
@@ -72,11 +72,11 @@ button, input, optgroup, select, textarea {
   margin-right: 0;
 }
 .starter-template .links ul li.current-version {
-  color: #f2b7bd;
+  color: #150a6e;
   font-weight: 400;
 }
 .starter-template .links ul li a, a {
-  color: #f2b7bd;
+  color: #150a6e;
   text-decoration: underline;
 }
 .starter-template .links ul li a:hover, a:hover {
@@ -84,7 +84,7 @@ button, input, optgroup, select, textarea {
   text-decoration: underline;
 }
 .starter-template .links ul li .icon-muted {
-  color: #eb8b95;
+  color: #150a6e;
   margin-right: 5px;
 }
 .starter-template .links ul li:hover .icon-muted {
@@ -93,11 +93,30 @@ button, input, optgroup, select, textarea {
 .starter-template .copyright {
   margin-top: 10px;
   font-size: 0.9em;
-  color: #f2b7bd;
+  color: #150a6e;
   text-transform: lowercase;
   float: right;
   right: 0;
 }
+.starter-template .logbook table {
+:  border: 1px solid;
+  width: 98%;
+}
+.starter-template .logbook tr {
+  border-bottom: 1px solid;
+}
+.starter-template .logbook tr:nth-child(even) {
+  background-color: #150a6e;
+}
+.starter-template .logbook th {
+  text-align: center;
+  padding: 1em;
+}
+.starter-template .logbook td {
+  text-align: center;
+  padding: 0.2em;
+}
+
 @media (max-width: 1199px) {
   .starter-template .content h1 {
     font-size: 45px;

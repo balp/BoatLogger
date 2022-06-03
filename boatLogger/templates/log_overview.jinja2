@@ -1,0 +1,32 @@
+{% extends "layout.jinja2" %}
+
+{% block content %}
+<div class="content">
+  <h1><span class="font-semi-bold">BoatLogger</span> <span class="smaller">Logs for my boat</span></h1>
+
+  <h2>Logbook Entries</h2>
+    <div class="logbook">
+      <table>
+          <thead>
+          <tr><th>Date</th><th>Time</th>
+              <th>Wind Direction</th><th>Wind Speed</th>
+              <th>Pressure</th><th>Temp</th>
+              <th>COG</th><th>SOG</th>
+              <th>Longitute</th><th>Lattitude</th>
+              <th>Notes</th>
+          </tr>
+          </thead>
+          <tbody>
+          {% for item in logbook %}
+              <tr>
+              <td>{{ item.when.strftime("%x") }}</td><td>{{ item.when.strftime("%X") }}</td>
+              <td>{{ item.degree(item.wind_direction) }}</td><td>{{ item.wind_speed|round(1)}}</td><td>{{ item.barometer }}</td><td>{{ item.temperature }}</td>
+              <td>{{ item.cog|int }}</td><td>{{ item.sog|round(1) }}</td><td>{{ item.position.longitude|round(4) }}</td><td>{{ item.position.latitude|round(4) }}</td>
+              <td>{{ item.notes }}</td>
+              </tr>
+          {% endfor %}
+          </tbody>
+      </table>
+    </div>
+</div>
+{% endblock content %}
